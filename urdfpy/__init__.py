@@ -1,20 +1,65 @@
-from .urdf import (URDFType,
-                   Box, Cylinder, Sphere, Mesh, Geometry,
-                   Texture, Material,
-                   Collision, Visual, Inertial,
-                   JointCalibration, JointDynamics, JointLimit, JointMimic,
-                   SafetyController, Actuator, TransmissionJoint,
-                   Transmission, Joint, Link, URDF)
-from .utils import (rpy_to_matrix, matrix_to_rpy, xyz_rpy_to_matrix,
-                    matrix_to_xyz_rpy)
+import numpy
+
+from .urdf import (
+    URDF,
+    Actuator,
+    Box,
+    Collision,
+    Cylinder,
+    Geometry,
+    Inertial,
+    Joint,
+    JointCalibration,
+    JointDynamics,
+    JointLimit,
+    JointMimic,
+    Link,
+    Material,
+    Mesh,
+    SafetyController,
+    Sphere,
+    Texture,
+    Transmission,
+    TransmissionJoint,
+    URDFType,
+    Visual,
+)
+from .utils import (
+    matrix_to_rpy,
+    matrix_to_xyz_rpy,
+    rpy_to_matrix,
+    xyz_rpy_to_matrix,
+)
 from .version import __version__
 
+setattr(numpy, "infty", numpy.inf)
+
 __all__ = [
-    'URDFType', 'Box', 'Cylinder', 'Sphere', 'Mesh', 'Geometry',
-    'Texture', 'Material', 'Collision', 'Visual', 'Inertial',
-    'JointCalibration', 'JointDynamics', 'JointLimit', 'JointMimic',
-    'SafetyController', 'Actuator', 'TransmissionJoint',
-    'Transmission', 'Joint', 'Link', 'URDF',
-    'rpy_to_matrix', 'matrix_to_rpy', 'xyz_rpy_to_matrix', 'matrix_to_xyz_rpy',
-    '__version__'
+    "URDFType",
+    "Box",
+    "Cylinder",
+    "Sphere",
+    "Mesh",
+    "Geometry",
+    "Texture",
+    "Material",
+    "Collision",
+    "Visual",
+    "Inertial",
+    "JointCalibration",
+    "JointDynamics",
+    "JointLimit",
+    "JointMimic",
+    "SafetyController",
+    "Actuator",
+    "TransmissionJoint",
+    "Transmission",
+    "Joint",
+    "Link",
+    "URDF",
+    "rpy_to_matrix",
+    "matrix_to_rpy",
+    "xyz_rpy_to_matrix",
+    "matrix_to_xyz_rpy",
+    "__version__",
 ]
